@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ServiceCard from './ServiceCard';
-
+import check from '../../assets/icons/check.svg'
 const Services = () => {
     const [services, setServices] = useState([]);
 
@@ -26,8 +26,34 @@ const Services = () => {
                     ></ServiceCard>)
                 }
             </div>
-            <div className='text-center'>
-                <button className='btn btn-outline border border-orange-700 text-orange-600 my-10 hover:bg-orange-700 hover:border-none'>More Services</button>
+            <div className='text-center my-10'>
+                <button className='btn btn-outline border border-orange-700 text-orange-600  hover:bg-orange-700 hover:border-none'>More Services</button>
+            </div>
+
+            <div className='bg-black text-white p-16 my-32 rounded-md'>
+                <div className='flex flex-wrap gap-8 md:justify-evenly justify-center items-center'>
+                    <div className='flex gap-3 items-center'>
+                        <img src={check} alt="" className='h-7 w-7' />
+                        <div>
+                            <h1 className='text-xs'>We are open monday-friday</h1>
+                            <h1 className='text-xl font-bold'>7:00 am - 9:00 pm</h1>
+                        </div>
+                    </div>
+                    <div className='flex gap-3 items-center'>
+                        <img src={check} alt="" className='h-7 w-7' />
+                        <div>
+                            <h1 className='text-xs'>Have a question? </h1>
+                            <h1 className='text-xl font-bold'>+880 1859 0535 43</h1>
+                        </div>
+                    </div>
+                    <div className='flex gap-3 items-center'>
+                        <img src={check} alt="" className='h-7 w-7' />
+                        <div>
+                            <h1 className='text-xs'>Need a repair? our address </h1>
+                            <h1 className='text-xl font-bold'>Mohipal Feni, Bangladesh</h1>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
