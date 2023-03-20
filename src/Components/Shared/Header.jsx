@@ -8,6 +8,10 @@ const Header = () => {
     const menuItems = <>
 
         <li className='font-semibold'><Link to='/'>Home</Link></li>
+        <li className='font-semibold'><Link to='/'>About</Link></li>
+        <li className='font-semibold'><Link to='/'>Services</Link></li>
+        <li className='font-semibold'><Link to='/'>Blog</Link></li>
+        <li className='font-semibold'><Link to='/'>Contact</Link></li>
     </>
     return (
         <div className="navbar h-20 mb-10 pt-12 bg-base-100">
@@ -30,7 +34,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <button className='btn btn-outline'>Appoinment</button>
+                <button className='btn btn-outline border-orange-700 text-orange-700 hover:bg-orange-700 hover:border-none'>Appoinment</button>
             </div>
         </div>
     );
