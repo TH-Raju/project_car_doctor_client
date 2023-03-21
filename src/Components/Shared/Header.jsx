@@ -1,10 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo.svg';
+import { AuthContext } from '../../context/AuthProvider';
 
 
 const Header = () => {
 
+    const { user, logOut } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const logout = () => {
+        logOut()
+            .then(
+                navigate('/login')
+            )
+            .catch(err => console.log(err))
+    }
     const menuItems = <>
 
         <li className='font-semibold'><Link to='/'>Home</Link></li>
@@ -12,7 +22,12 @@ const Header = () => {
         <li className='font-semibold'><Link to='/'>Services</Link></li>
         <li className='font-semibold'><Link to='/'>Blog</Link></li>
         <li className='font-semibold'><Link to='/'>Contact</Link></li>
-        <li className='font-semibold'><Link to='/login'>Log in</Link></li>
+        {
+            user ?
+                <li className='font-semibold btn btn-outline btm-nav-sm rounded-xl' onClick={logout}><Link to='/login'>Log Out</Link></li>
+                :
+                <li className='font-semibold'><Link to='/login'>Log in</Link></li>
+        }
     </>
     return (
         <div className="navbar h-20 mb-10 pt-12 bg-base-100">
