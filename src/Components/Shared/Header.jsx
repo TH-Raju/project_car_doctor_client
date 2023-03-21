@@ -12,6 +12,7 @@ const Header = () => {
         <li className='font-semibold'><Link to='/'>Services</Link></li>
         <li className='font-semibold'><Link to='/'>Blog</Link></li>
         <li className='font-semibold'><Link to='/'>Contact</Link></li>
+        <li className='font-semibold'><Link to='/login'>Log in</Link></li>
     </>
     return (
         <div className="navbar h-20 mb-10 pt-12 bg-base-100">
