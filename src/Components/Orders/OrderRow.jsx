@@ -43,7 +43,7 @@ const OrderRow = ({ order, handleDelete, handleStatusUpdate }) => {
             <th>
                 <button
                     onClick={() => handleStatusUpdate(_id)}
-                    className="btn btn-ghost btn-xs">{status ? status : 'pending'}</button>
+                    className={`btn btn-ghost btn-sm ${status === "Approved" ? 'bg-green-500 hover:bg-green-500 ' : ' '}`}>{status ? status : 'pending'}</button>
             </th>
         </tr>
     );
