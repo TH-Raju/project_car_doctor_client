@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import login from '../../assets/images/login/login.svg';
 import { AuthContext } from '../../context/AuthProvider';
 
 const Login = () => {
     const { signInUser } = useContext(AuthContext)
+    const [err, setErr] = useState('');
 
     const navigate = useNavigate();
     const handleLogin = event => {
@@ -21,7 +22,7 @@ const Login = () => {
                 form.reset()
                 navigate('/')
             })
-            .catch(err => console.log(err))
+            .catch(error => setErr(error.message))
 
     }
     return (
@@ -47,6 +48,9 @@ const Login = () => {
                             <label className="label">
                                 <a href=" " className="label-text-alt link link-hover">Forgot password?</a>
                             </label>
+                        </div>
+                        <div>
+                            {err && <p className='text-red-500 border p-4 border-red-600 border-spacing-2'>{err}</p>}
                         </div>
                         <div className="form-control mt-6">
                             <input type="submit" className="btn btn-primary" value="Log in" />

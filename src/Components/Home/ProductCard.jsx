@@ -7,7 +7,7 @@ const ProductCard = ({ product }) => {
             <figure><img src={img} alt="product" className='h-40 w-40' /></figure>
             <div className="rating justify-center mt-5">
                 <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400 h-5" />
-                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400 h-5" checked />
+                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400 h-5" defaultChecked />
                 <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400 h-5" />
                 <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400 h-5" />
                 <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400 h-5" />
