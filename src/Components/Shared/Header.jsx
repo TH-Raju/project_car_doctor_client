@@ -16,15 +16,16 @@ const Header = () => {
             .catch(err => console.log(err))
     }
     const menuItems = <>
-
         <li className='font-semibold'><Link to='/'>Home</Link></li>
         <li className='font-semibold'><Link to='/'>About</Link></li>
         <li className='font-semibold'><Link to='/'>Services</Link></li>
         <li className='font-semibold'><Link to='/'>Blog</Link></li>
         <li className='font-semibold'><Link to='/'>Contact</Link></li>
         {
-            user ?
+            user ? <>
+                <li className='font-semibold'><Link to='/orders'>Orders</Link></li>
                 <li className='font-semibold btn btn-outline btm-nav-sm rounded-xl' onClick={logout}><Link to='/login'>Log Out</Link></li>
+            </>
                 :
                 <li className='font-semibold'><Link to='/login'>Log in</Link></li>
         }
