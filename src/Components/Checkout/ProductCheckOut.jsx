@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
-import banner from "../../assets/images/checkout/checkout.png";
 import Bannaar from '../Shared/Bannaar';
+import banner from "../../assets/images/checkout/checkout.png";
 import useTitle from '../Shared/useTitle';
 
-const CheckOut = () => {
-    useTitle('Order');
+const ProductCheckOut = () => {
+    useTitle('Order')
     const { _id, title, price } = useLoaderData()
     const { user } = useContext(AuthContext);
     const handlePlaceOrder = event => {
@@ -53,7 +53,7 @@ const CheckOut = () => {
 
     return (
         <div>
-            <Bannaar img={banner} txt={'Add New Service'} btnTxt={'Home/Service'}></Bannaar>
+            <Bannaar img={banner} txt={'Buy New Product'} btnTxt={'Home/Product'}></Bannaar>
             <form onSubmit={handlePlaceOrder} className="my-10">
                 <h2 className="text-4xl">You are about to order: <span className='font-bold'>{title}</span></h2>
                 <h4 className="text-3xl mb-5">Price: <span className='font-bold'>{price}$</span></h4>
@@ -63,11 +63,13 @@ const CheckOut = () => {
                     <input name="phone" type="text" placeholder="Your Phone" required className="input input-bordered w-full" />
                     <input name="email" type="text" placeholder="Your Email" defaultValue={user?.email} readOnly className="input input-bordered w-full" />
                 </div>
-                <textarea name="message" required className="textarea textarea-bordered h-24 w-full mt-5" placeholder="Your Message"></textarea>
+                <textarea name="message" required className="textarea textarea-bordered h-24 w-full mt-5" placeholder="Your Address"></textarea>
                 <input type="submit" className='btn w-full btn-primary bg-orange-700 text-white border border-orange-700   hover:bg-orange-700 hover:border-none my-8' value="Place Your Order" />
             </form>
+
         </div>
     );
 };
 
-export default CheckOut;
+
+export default ProductCheckOut;

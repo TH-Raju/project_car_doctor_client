@@ -3,7 +3,7 @@ import React from 'react';
 const BannerSignle = ({ slide }) => {
     const { image, id, prev, next } = slide;
     return (
-        <div id={`slide${id}`} className="carousel-item border border-spacing-2.5 rounded-xl relative w-full bg-gradient-to-r from-black via-gray-700 to-transparent">
+        <div id={`slide${id}`} className="carousel-item border border-spacing-2.5 rounded-xl relative w-full bg-gradient-to-r from-black to-gray-500">
             <img src={image} className="w-full mix-blend-overlay object-cover" alt='img' />
             <div className="absolute flex justify-start transform -translate-y-1/2 md:left-24 left-11 right-10 top-1/4 ">
                 <h1 className='md:text-7xl text-3xl font-bold text-white'>Affordable <br /> Price For Car <br /> Servicing</h1>

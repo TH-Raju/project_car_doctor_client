@@ -7,7 +7,7 @@ const Orders = () => {
     const [orders, setOrders] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orders?email=${user?.email}`)
+        fetch(`http://localhost:5000/serviceOrders?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [user?.email])
@@ -15,7 +15,7 @@ const Orders = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to cancel this order');
         if (proceed) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`http://localhost:5000/serviceOrders/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -31,7 +31,7 @@ const Orders = () => {
     }
 
     const handleStatusUpdate = id => {
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`http://localhost:5000/serviceOrders/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
@@ -63,8 +63,8 @@ const Orders = () => {
                             </th>
                             <th>Name</th>
                             <th>Job</th>
-                            <th>Favorite Color</th>
-                            <th></th>
+                            <th>Message</th>
+                            <th>Approval</th>
                         </tr>
                     </thead>
                     <tbody>

@@ -21,7 +21,7 @@ const Products = () => {
                 <p className='w-1/2 mx-auto'>The majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
             </div>
             <div className='flex flex-wrap justify-around items-center gap-6'>
-                <h2>{products.length}</h2>
+
                 {
                     products.map(product => <ProductCard
                         key={product._id}
@@ -31,7 +31,16 @@ const Products = () => {
                 }
             </div>
             <div className='text-center my-10'>
-                <button className='btn btn-outline border border-orange-700 text-orange-600  hover:bg-orange-700 hover:border-none'>More Products</button>
+                <label htmlFor="my-modal-4" className='btn btn-outline border border-orange-700 text-orange-600  hover:bg-orange-700 hover:border-none'>More Products</label>
+
+                {/* Put this part before </body> tag */}
+                <input type="checkbox" id="my-modal-4" className="modal-toggle" />
+                <label htmlFor="my-modal-4" className="modal cursor-pointer">
+                    <label className="modal-box relative" htmlFor="">
+                        <h3 className="text-lg font-bold">We Don't have any product yet!</h3>
+                        <h3 className="text-lg font-bold">Stock Out</h3>
+                    </label>
+                </label>
             </div>
         </div>
     );

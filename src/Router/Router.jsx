@@ -5,6 +5,12 @@ import Login from "../Components/LogSign/Login";
 import SignUp from "../Components/LogSign/SignUp";
 import Orders from "../Components/Orders/Orders";
 import Main from "../Layout/Main";
+import PrivateRoute from "../Route/PrivateRoute";
+import ProductCheckOut from "../Components/Checkout/ProductCheckOut";
+import ServiceRoute from "../Components/Home/ServiceRoute";
+import Errorpage from "../Components/Shared/Errorpage";
+import Contact from "../Components/Contact";
+import Faq from "../Components/Faq";
 
 const router = createBrowserRouter([
     {
@@ -16,6 +22,14 @@ const router = createBrowserRouter([
                 element: <Home></Home>
             },
             {
+                path: '/faq',
+                element: <Faq></Faq>
+            },
+            {
+                path: '/services',
+                element: <ServiceRoute></ServiceRoute>
+            },
+            {
                 path: '/login',
                 element: <Login></Login>
             },
@@ -25,14 +39,27 @@ const router = createBrowserRouter([
             },
             {
                 path: '/checkout/:id',
-                element: <CheckOut></CheckOut>,
+                element: <PrivateRoute><CheckOut></CheckOut></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
             },
             {
+                path: '/productCheckout/:id',
+                element: <PrivateRoute><ProductCheckOut></ProductCheckOut> </PrivateRoute>,
+                loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`)
+            },
+            {
                 path: '/orders',
-                element: <Orders></Orders>
+                element: <PrivateRoute><Orders></Orders></PrivateRoute>
+            },
+            {
+                path: '/contact',
+                element: <Contact></Contact>
             }
         ]
+    },
+    {
+        path: '*',
+        element: <Errorpage></Errorpage>
     }
 ])
 

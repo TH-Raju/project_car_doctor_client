@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo.svg';
 import { AuthContext } from '../../context/AuthProvider';
 
@@ -16,22 +16,21 @@ const Header = () => {
             .catch(err => console.log(err))
     }
     const menuItems = <>
-        <li className='font-semibold'><Link to='/'>Home</Link></li>
-        <li className='font-semibold'><Link to='/'>About</Link></li>
-        <li className='font-semibold'><Link to='/'>Services</Link></li>
-        <li className='font-semibold'><Link to='/'>Blog</Link></li>
-        <li className='font-semibold'><Link to='/'>Contact</Link></li>
+        <li className='font-semibold'><NavLink activeClassName='is-active' to='/'>Home</NavLink></li>
+        <li className='font-semibold'><NavLink activeClassName='is-active' to='/services'>Services</NavLink></li>
+        <li className='font-semibold'><NavLink activeClassName='is-active' to='/faq'>Faq</NavLink></li>
+        <li className='font-semibold'><NavLink activeClassName='is-active' to='/contact'>Contact</NavLink></li>
         {
             user ? <>
-                <li className='font-semibold'><Link to='/orders'>Orders</Link></li>
-                <li className='font-semibold btn btn-outline btm-nav-sm rounded-xl' onClick={logout}><Link to='/login'>Log Out</Link></li>
+                <li className='font-semibold'><NavLink activeClassName='is-active' to='/orders'>Orders</NavLink></li>
+                <li className='font-semibold btn btn-outline btm-nav-sm rounded-xl' onClick={logout}><NavLink activeClassName='is-active' to='/login'>Log Out</NavLink></li>
             </>
                 :
-                <li className='font-semibold'><Link to='/login'>Log in</Link></li>
+                <li className='font-semibold'><NavLink activeClassName='is-active' to='/login'>Log in</NavLink></li>
         }
     </>
     return (
-        <div className="navbar h-20 mb-10 pt-12 bg-base-100">
+        <div className="navbar h-20 mb-10 py-8 bg-white z-20 sticky top-0 shadow-lg shadow-gray-400 ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -46,12 +45,21 @@ const Header = () => {
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu menu-horizontal px-1 gap-2">
                     {menuItems}
                 </ul>
             </div>
             <div className="navbar-end">
-                <button className='btn btn-outline border-orange-700 text-orange-700 hover:bg-orange-700 hover:border-none'>Appoinment</button>
+                <label htmlFor="my-modal-8" className='btn btn-outline border-orange-700 text-orange-700 hover:bg-orange-700 hover:border-none'>Appoinment</label>
+
+                {/* Put this part before </body> tag */}
+                <input type="checkbox" id="my-modal-8" className="modal-toggle" />
+                <label htmlFor="my-modal-8" className="modal cursor-pointer">
+                    <label className="modal-box relative" htmlFor="">
+                        <h3 className="text-lg font-bold">Thanks for choosing us!</h3>
+                        <p className="py-4">You can Choose any Service also You can Buy any Product from Us. Please fill free to visit Home page.</p>
+                    </label>
+                </label>
             </div>
         </div>
     );

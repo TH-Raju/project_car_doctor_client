@@ -14,37 +14,37 @@ const Features = () => {
                 <p className='w-1/2 mx-auto'>The majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly Believable.</p>
             </div>
             <div className='flex flex-wrap justify-around items-center gap-5'>
-                <div className="card card-compact w-96 p-2 hover:bg-orange-700 hover:text-white shadow-xl">
+                <div className="card card-compact w-96 p-2 hover:bg-orange-700 duration-150 delay-100 hover:text-white shadow-xl">
                     <figure><img src={icon1} alt="Shoes" className='bg-white rounded-xl p-2' /></figure>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title">Expert Team</h2>
                     </div>
                 </div>
-                <div className="card card-compact w-96 p-2 hover:bg-orange-700 hover:text-white shadow-xl">
+                <div className="card card-compact w-96 p-2 hover:bg-orange-700 duration-150 delay-100 hover:text-white shadow-xl">
                     <figure><img src={icon5} alt="Shoes" className='bg-white rounded-xl p-2' /></figure>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title">Timely Delivery</h2>
                     </div>
                 </div>
-                <div className="card card-compact w-96 p-2 hover:bg-orange-700 hover:text-white shadow-xl">
+                <div className="card card-compact w-96 p-2 hover:bg-orange-700 duration-150 delay-100 hover:text-white shadow-xl">
                     <figure><img src={icon3} alt="Shoes" className='bg-white rounded-xl p-2' /></figure>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title">24/7 Support</h2>
                     </div>
                 </div>
-                <div className="card card-compact w-96 p-2 hover:bg-orange-700 hover:text-white shadow-xl">
+                <div className="card card-compact w-96 p-2 hover:bg-orange-700 duration-150 delay-100 hover:text-white shadow-xl">
                     <figure><img src={icon4} alt="Shoes" className='bg-white rounded-xl p-2' /></figure>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title">Best Equipment</h2>
                     </div>
                 </div>
-                <div className="card card-compact w-96 p-2 hover:bg-orange-700 hover:text-white shadow-xl">
+                <div className="card card-compact w-96 p-2 hover:bg-orange-700 duration-150 delay-100 hover:text-white shadow-xl">
                     <figure><img src={icon5} alt="Shoes" className='bg-white rounded-xl p-2' /></figure>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title">100% Guranty</h2>
                     </div>
                 </div>
-                <div className="card card-compact w-96 p-2 hover:bg-orange-700 hover:text-white shadow-xl">
+                <div className="card card-compact w-96 p-2 hover:bg-orange-700 duration-150 delay-100 hover:text-white shadow-xl">
                     <figure><img src={icon6} alt="Shoes" className='bg-white rounded-xl p-2' /></figure>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title">Timely Delivery</h2>

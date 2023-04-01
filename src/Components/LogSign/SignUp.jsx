@@ -2,9 +2,10 @@ import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import login from '../../assets/images/login/login.svg';
 import { AuthContext } from '../../context/AuthProvider';
+import useTitle from '../Shared/useTitle';
 
 const SignUp = () => {
-
+    useTitle('Sign up')
     const { createUser } = useContext(AuthContext)
     const navigate = useNavigate();
     const handleSignUp = event => {
@@ -49,7 +50,7 @@ const SignUp = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="text" name="password" placeholder="password" className="input input-bordered" required />
+                            <input type="password" name="password" placeholder="password" className="input input-bordered" required />
                         </div>
                         <div className="form-control mt-6">
                             <input type="submit" className="btn btn-primary" value="Sign Up" />
