@@ -165,7 +165,6 @@ const Faq = () => {
                 </div>
             </section>
         </div>
-
     );
 };
 

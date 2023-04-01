@@ -10,7 +10,6 @@ import img4 from '../../assets/images/testimonial/player-4.png'
 const Testimonial = () => {
     const responsive = {
         superLargeDesktop: {
-            // the naming can be any, depends on you.
             breakpoint: { max: 4000, min: 3000 },
             items: 5
         },

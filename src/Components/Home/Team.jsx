@@ -17,7 +17,6 @@ const Team = () => {
                 <h2 className='text-5xl font-semibold my-6'>Meet Our Team</h2>
                 <p className='w-1/2 mx-auto'>The majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly Believable.</p>
             </div>
-
             <div className='flex flex-wrap justify-center items-center'>
                 <div className="card w-96 bg-base-100 shadow-xl">
                     <figure className="px-10 pt-10">

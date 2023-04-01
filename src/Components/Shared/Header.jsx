@@ -51,8 +51,6 @@ const Header = () => {
             </div>
             <div className="navbar-end">
                 <label htmlFor="my-modal-8" className='btn btn-outline border-orange-700 text-orange-700 hover:bg-orange-700 hover:border-none'>Appoinment</label>
-
-                {/* Put this part before </body> tag */}
                 <input type="checkbox" id="my-modal-8" className="modal-toggle" />
                 <label htmlFor="my-modal-8" className="modal cursor-pointer">
                     <label className="modal-box relative" htmlFor="">

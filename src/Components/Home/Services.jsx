@@ -28,7 +28,6 @@ const Services = () => {
             <div className='text-center my-10'>
                 <label htmlFor="my-modal-5" className='btn btn-outline border border-orange-700 text-orange-600  hover:bg-orange-700 hover:border-none'>More Services</label>
 
-                {/* Put this part before </body> tag */}
                 <input type="checkbox" id="my-modal-5" className="modal-toggle" />
                 <label htmlFor="my-modal-5" className="modal cursor-pointer">
                     <label className="modal-box relative" htmlFor="">
