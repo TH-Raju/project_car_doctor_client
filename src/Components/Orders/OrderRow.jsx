@@ -17,8 +17,6 @@ const OrderRow = ({ order, handleDelete, handleStatusUpdate }) => {
             .then(data => setOrderProduct(data));
     }, [service])
 
-
-
     return (
         <tr>
             <th>
