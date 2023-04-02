@@ -5,13 +5,13 @@ const Services = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://car-doctor-server-eta.vercel.app/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
 
     return (
-        <div className='my-32'>
+        <div className='my-32' id='service'>
             <div className='text-center mb-8'>
                 <p className="text-2xl font-bold text-orange-600">Services</p>
                 <h2 className='text-5xl font-semibold my-6'>Our Service Area</h2>

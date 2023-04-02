@@ -5,7 +5,7 @@ const Products = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/product')
+        fetch('https://car-doctor-server-eta.vercel.app/product')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
@@ -34,7 +34,7 @@ const Products = () => {
                 <input type="checkbox" id="my-modal-4" className="modal-toggle" />
                 <label htmlFor="my-modal-4" className="modal cursor-pointer">
                     <label className="modal-box relative" htmlFor="">
-                        <h3 className="text-lg font-bold">We Don't have any product yet!</h3>
+                        <h3 className="text-lg font-bold">We Don't have any Other product yet!</h3>
                         <h3 className="text-lg font-bold">Stock Out</h3>
                     </label>
                 </label>

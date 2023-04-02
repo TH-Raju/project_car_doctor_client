@@ -6,13 +6,13 @@ const OrderRow = ({ order, handleDelete, handleStatusUpdate }) => {
     const [orderProduct, setOrderProduct] = useState({})
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${service}`)
+        fetch(`https://car-doctor-server-eta.vercel.app/services/${service}`)
             .then(res => res.json())
             .then(data => setOrderService(data));
     }, [service])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/product/${service}`)
+        fetch(`https://car-doctor-server-eta.vercel.app/product/${service}`)
             .then(res => res.json())
             .then(data => setOrderProduct(data));
     }, [service])

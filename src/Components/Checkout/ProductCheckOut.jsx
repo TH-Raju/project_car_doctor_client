@@ -32,7 +32,7 @@ const ProductCheckOut = () => {
         //     alert('Phone number should be 10 character or longer')
         // }
 
-        fetch('http://localhost:5000/serviceOrders/', {
+        fetch('https://car-doctor-server-eta.vercel.app/serviceOrders/', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
